@@ -38,25 +38,25 @@ public class Bank : MonoBehaviour
                     moneyTest = moneyTest - amountMoney;
                     bankdeposit = bankdeposit + amountMoney;
                     UpdateBankDepositText();
-                    checkMoney.text = " Completed. ";
+                    checkMoney.text = "ฝากเงินเสร็จสิ้น";
                     checkMoney.color = Color.green;
                     amountMoneyText.text = "";  ///Note: add Energy
                 }
                 else
                 {
-                    checkMoney.text = " you don't have enough money. ";
+                    checkMoney.text = " ท่านไม่มีเงินพอที่จะฝากตามจำนวนนี้ ";
                     checkMoney.color = Color.red;
                 }
             }
             else
             {
-                checkMoney.text = " Please enter the correct deposit amount. ";
+                checkMoney.text = " โปรดใส่จำนวนเงินที่ต้องการฝากให้ถูกต้อง ";
                 checkMoney.color = Color.red;
             }
         }
         else
         {
-            checkMoney.text = " Please enter deposit amount. ";
+            checkMoney.text = " โปรดใส่จำนวนเงินที่ต้องการฝาก ";
             checkMoney.color = Color.red;
         }
     }
@@ -68,12 +68,12 @@ public class Bank : MonoBehaviour
             bankdeposit = bankdeposit + moneyTest;
             moneyTest = 0;
             UpdateBankDepositText();
-            checkMoney.text = " Completed. ";
+            checkMoney.text = "ฝากเงินเสร็จสิ้น";
             checkMoney.color = Color.green;   ///Note: add Energy
         }
         else
         {
-            checkMoney.text = " you have no money. ";
+            checkMoney.text = " ท่านไม่มีเงินพอที่จะฝากเลย ";
             checkMoney.color = Color.red;
         }
     }
@@ -90,25 +90,25 @@ public class Bank : MonoBehaviour
                     moneyTest = moneyTest + amountMoney;
                     bankdeposit = bankdeposit - amountMoney;
                     UpdateBankDepositText();
-                    checkMoney.text = " Completed. ";
+                    checkMoney.text = "ถอนเงินเสร็จสิ้น";
                     checkMoney.color = Color.green;
                     amountMoneyText.text = "";   ///Note: add Energy
                 }
                 else
                 {
-                    checkMoney.text = " You do not have enough deposit to withdraw this amount. ";
+                    checkMoney.text = " ท่านไม่มีเงินฝากพอที่จะถอนตามจำนวนนี้ ";
                     checkMoney.color = Color.red;
                 }
             }
             else
             {
-                checkMoney.text = " Please enter the correct withdrawal amount. ";
+                checkMoney.text = " โปรดใส่จำนวนเงินที่ต้องการถอนให้ถูกต้อง ";
                 checkMoney.color = Color.red;
             }
         }
         else
         {
-            checkMoney.text = " Please enter withdrawal amount. ";
+            checkMoney.text = " โปรดใส่จำนวนเงินที่ต้องการถอน ";
             checkMoney.color = Color.red;
         }
     }
@@ -120,12 +120,12 @@ public class Bank : MonoBehaviour
             moneyTest = moneyTest + bankdeposit;
             bankdeposit = 0;
             UpdateBankDepositText();
-            checkMoney.text = " Completed. ";
+            checkMoney.text = "ถอนเงินเสร็จสิ้น";
             checkMoney.color = Color.green;   ///Note: add Energy
         }
         else
         {
-            checkMoney.text = " you have no deposit. ";
+            checkMoney.text = " ท่านไม่มีเงินฝากพอที่จะถอนเลย ";
             checkMoney.color = Color.red;
         }
     }
